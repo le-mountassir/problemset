@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 void isPalindrome(int x){
-    int index =0;
-    int pr = x;
+    long index =0;
+    long pr = x;
     while (x != '\0')
     {
         index = index*10 + x%10;
