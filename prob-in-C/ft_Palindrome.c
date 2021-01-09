@@ -8,7 +8,7 @@ void isPalindrome(int x){
         index = index*10 + x%10;
         x = x / 10;
     }
-    if (index == pr){
+    if (pr >= 1 && index == pr){
         printf("true");
     }
     else{
