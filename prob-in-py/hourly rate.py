@@ -1,7 +1,10 @@
 hrs = input("Enter Hours:")
-rate = input("rate:")
-h = float(hrs)
-r = float(rate)
+rate = input("Enter Rate:")
+try:
+    h = float(hrs)
+    r = float(rate)
+except:
+    print("you entered a wrong number")
 if(h > 40):
     y = h - 40
     t = 40 * r + y *1.5*r
