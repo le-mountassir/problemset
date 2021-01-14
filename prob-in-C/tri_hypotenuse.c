@@ -1,12 +1,25 @@
 #include <stdio.h>
 int main(){
-	double res, fst, nd;
+	double r, res, fst, nd, t;
+	r =0;
 	printf("enter the 1st number : \n");
-	scanf("%lf", &fst);
+	scanf("%g", &fst);
 	printf("-2nd number-\n");
-	scanf("%lf", &nd);
+	scanf("%g", &nd);
 	res=(fst*fst)+(nd*nd);
-	res*=res;
-	printf("the triangle hypotenuse is : %f\n", res);
+	if(res < 0){
+		res=0;
+	}
+	while((r*r)< res){
+		r++;
+	}
+	if((r*r)==res){
+		res=r;
+	}
+	else{
+		res =0;
+	}
+	
+	printf("the triangle hypotenuse is : %g\n", res);
 	return 0;
 }
