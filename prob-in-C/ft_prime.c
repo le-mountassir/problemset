@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void ft_prime(int x){
-	while(x >0){
+	while(x >1){
 		if((x%2)!=0){
 			printf("%d\n",x);
 		}
