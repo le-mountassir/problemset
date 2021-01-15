@@ -1,11 +1,16 @@
 #include <stdio.h>
 
 void ft_prime(int x){
-	while(x >1){
+	if((x%2)==0){
+		printf("\n%d is prime!\n",x);
+	}
+	else{
+		printf("\n%d is not prime\n",x);
+	}
+	for(x; x>1; x--){
 		if((x%2)!=0){
 			printf("%d\n",x);
 		}
-		x--;
 	}
 }
 int main(){
@@ -15,6 +20,3 @@ int main(){
 	ft_prime(y);
 	return 0;
 }
-
-
-
