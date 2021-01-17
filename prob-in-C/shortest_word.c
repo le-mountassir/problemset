@@ -1,24 +1,21 @@
-#include <stdio.h>
-char find_short(const char *s)
-{
-  int wn=2000,i=0,k=1;
-  while(s[i]!='\0'){
-    if(s[i]==32){
-      if(k<=wn){
-        wn = k;
-        k=0;
-      }
-      else{
-        k=0;
-      }
-    }
-    k++;
-    i++;
-  }
-    return wn-1;
+#include <sys/types.h>
+#include <string.h>
+
+void check_if_less_found(int *s, int *c){
+  if(*c < *s || *s == 0)
+    *s = *c;
+  *c = 0;
 }
-int main(){
-  int h = find_short("ahmed el mountassir he");
-  printf("%d",h);
-  return 0;
+
+ssize_t find_short(const char *s){
+  int curr = 0, shortest = 0;
+
+  while(*s != '\0'){
+    if(*s == ' ') check_if_less_found(&shortest, &curr);
+    else curr++;
+    s += sizeof(char);
+  }
+    
+  check_if_less_found(&shortest, &curr);
+  return shortest;
 }
