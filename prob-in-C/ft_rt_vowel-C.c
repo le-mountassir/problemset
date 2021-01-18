@@ -2,7 +2,7 @@
 int vowel_counter(char *str){
 	int i =0, k=0;
 	while(str[i]!='\0'){
-		if(str[i]=='a'||str[i]=='i'||str[i]=='u'||str[i]=='e'||str[i]=='o'||str[i]=='A'||str[i]=='I'||str[i]=='U'||str[i]=='E'||str[i]=='O'){
+		if(str[i] > 'u' || (str[i] > 'U' && str[i] < 'a')){
 			k++;	
 		}
 		i++;
