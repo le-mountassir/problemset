@@ -1,29 +1,32 @@
+#include <unistd.h>
 #include <stdio.h>
 int ft_atoi(char *str){
     int i;
-    int p;
+    int k;
     int l;
-    char  k;
-    p = 0;
-    i = 0;
+    int j;
+    i=0;
+    k=1;
+    j=0;
+    if(str[0]=='-'){
+        k = -1;
+    }
+    if(str[0] == '-' || str[0] == '+'){
+        i++;
+    }
     while(str[i] != '\0'){
         if(str[i] >= 48 && str[i] <= 57){
-            l = 0;
-            k = 48;
-            while(k != str[i]){
-                k++;
-                l++;
-            }
-            p = (p * 10) + l;
+            l = str[i] - '0';
+            j = (j * 10) + l;
         }
-        else if(str[i] < 48 || str[i] > 57){
-            return p;
+        else{
+            break;
         }
         i++;
     }
-    return p;
+    return (k*j);
 }
-int main(){
-    printf("%d", ft_atoi("7077jkjkl08"));
+int  main (){
+    printf("%d", ft_atoi("-2149jjdfjvj23981"));
     return 0;
 }
