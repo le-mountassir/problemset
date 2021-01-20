@@ -16,11 +16,9 @@ char *strrev(char *str){
         str[i] = str[k];
         str[k] = store;
         i--;
+
+
         k++;
     }
     return (str);
-}
-int main(){
-    printf("%s", strrev("hi"));
-    return 0;
 }
