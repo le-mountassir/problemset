@@ -1,2 +1,0 @@
-!ay ra9m %9 kay3ti lmjmo3 dial roots eg: 1324 % 9 = 1+3+2+4
-!t9dr dir return lfuction flfunction eg: test(int n):n=9 b=n+1 return test(b) == loop 
