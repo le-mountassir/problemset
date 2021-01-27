@@ -28,7 +28,3 @@ int ft_atoi(const char *str){
 	}
 	return (j*k);
 }
-int main(){
-	printf("%d", ft_atoi("\n  +98ko29"));
-	return 0;
-}
